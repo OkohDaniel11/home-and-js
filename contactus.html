@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Prima">
+        <meta name="keyword" content="Health, Fitness">
+        <meta name="author" content="Daniel Okoh">
+        <title>Homepage</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="favicon/prima.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <a href="landingpage.html"><img src="logo/PRIMa (1).png" alt="logo" class="logo"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="home.html">Home &#43;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contactus.html">Contact us</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div class="contactus-outercontainer">
+                    <div class="contactus-container">
+                        <h1 class="contactus-h1">
+                            Get in touch with us we are always here to help
+                        </h1>
+                        <p class="contactp">
+                            Drop us a line or give us a shout if you need more information on us.
+                        </p>
+                    </div>
+                </div>
+                <div class="hidden-container" id="hidden-container">
+                    <div class="contact-info">
+                        <p>
+                            Email:
+                            <span class="infoinner">prima.info@gmail.com</span>
+                        </p>
+                        <p>
+                            Phone Number:
+                            <span class="infoinner"> 0894994793</span>
+                        </p>
+                        <p>
+                            Address:
+                            <span class="infoinner">Blanchardstown Rd S, Blanchardstown, Dublin 15</span>
+                        </p>
+                        <p>
+                            General Enquiries:
+                            <span class="infoinner">01 230455</span>
+                        </p>
+                        
+                    </div>
+                    <div class="maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.2165658566164!2d-6.39164021760644!3d53.39306578867551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670d5570271fed%3A0x2dd584dd81b6f506!2sBlanchardstown%20Rd%20S%2C%20Blanchardstown%2C%20Dublin%2015!5e0!3m2!1sen!2sie!4v1722258732788!5m2!1sen!2sie" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="arrowdown"><p class="arrow" onclick="dropdownContact()" id="arrow">&#709;</p></div>
+            </section>
+            <section>
+                <div class="getintouch-container">
+                    <div class="getintouch-h2">
+                        <h2>Get In Touch</h2>
+                    </div>
+                    <form action="https://formdump.codeinstitute.net/" target="_blank" method="post">
+                        <div class="input-container">
+                            <input type="text" name="fullname" class="contact fullname" placeholder="Enter Your Full Name" required>
+                            <input type="text" name="number" class="contact number" placeholder="Enter Your Phone Number" required>
+                            <input type="email" name="email" class="contact mail" placeholder="Enter Your Email Address" required>
+                        </div>
+                        <div class="textarea-container">
+                            <textarea name="" id="" class="contact-textarea" placeholder="Write your query here."></textarea>
+                        </div>
+                        <div class="submit-container">
+                            <input type="submit" class="contact-submit" value="Send!">
+                        </div>
+                    </form>
+                    <div class="contact-lastline">
+                        <p>
+                            We will get back to you as soon as possible.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--Footer-->
+        <footer class="footer-container">
+            <div class="footer-div">
+                <span><a href="#">Home</a></span>
+                <span><a href="#">Facebook</a></span>
+                <span><a href="#">Instagram</a></span>
+                <span><a href="#">Twitter</a></span>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

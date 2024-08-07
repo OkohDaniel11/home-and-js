@@ -1,0 +1,1390 @@
+/* Include the Font */
+@font-face {
+    font-family: 'TAN Mon Cheri';
+    src: url('../fonts/TAN_MON_CHERI/TAN_MON_CHERI/TAN-MON\ CHERI.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Include the TT Hazelnuts Font */
+@font-face {
+    font-family: 'TT Hazelnuts';
+    src: url('fonts/TTHazelnuts-Regular.woff2') format('woff2'),
+         url('fonts/TTHazelnuts-Regular.woff') format('woff'),
+         url('fonts/TTHazelnuts-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brittany Signature'; /* Define a name for your font family */
+    src: url('../fonts/brittany_signature/BrittanySignature.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal; /* Define the font weight */
+    font-style: normal; /* Define the font style */
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #edebe6;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: #edebe6;
+    display: flex;
+    justify-content: space-around; /* Space out the elements in the header */
+    align-items: center; /* Vertically center the items in the header */
+    padding: 0 20px; /* Add padding to the sides of the header */
+}
+
+.logo{
+    height: 100px;
+}
+
+nav{
+    flex-grow: 1;/*Allow nav element to grow and take available spaces*/
+}
+
+.navbar ul{
+    display: flex; /*Use flexbox for the navbar list*/
+    justify-content: flex-end; /*Allign the nav bar to the right*/
+    gap: 5%; /*adds 5% space in-between the nav bar*/
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    list-style: none; /*removes the bullet points on the list*/
+}
+
+.navbar ul li{
+    position: relative; /* Set position for pseudo-element styling */
+}
+
+.navbar ul li a{
+    text-transform: uppercase;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px; /* Set the height of the underline */
+    width: 0; /* Start with zero width */
+    background: black;
+    position: absolute;
+    left: 0; /* Align to the left */
+    bottom: -5px; /* Position below the text */
+    transition: width 0.4s; /* Smooth transition for width change */
+}
+
+.navbar ul li:hover::after{
+    width: 100%; /* Expand underline to full width on hover */
+}
+
+/*Dropdown Content Styles*/
+li .dropdown-content{
+    display: none;
+    padding: 20px;
+    gap: 2%;
+    position: absolute; 
+    width: 180px;
+    top: 35px;
+    right: -50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);/*box shadow for better visibility*/
+}
+
+li .dropdown-content li{
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s;/*smooth transition for color change*/
+}
+
+li .dropdown-content a:hover{
+    color: white;
+}
+
+li .dropdown-content li::after {
+    content: none;
+}
+
+
+li:hover .dropdown-content{
+    display: block;
+}
+
+/*Main Section Styles*/
+.middle-header{
+    text-align: center;  /*center any text within this section*/
+    height: 20vh; 
+    padding: 50px;
+}
+
+.background{
+    height: 30vh;
+    background-color: #edebe6;
+    text-align: center;
+    padding: 80px;
+}
+
+.banner-title{
+    font-family: 'TAN Mon Cheri';
+    font-size: 60px;
+    text-transform: uppercase;
+    animation: pan-in 5s forwards;
+}
+
+.line{
+    width: 4%;
+    animation: pan-in 5s forwards;
+    
+}
+
+.banner-middle{
+    font-family: 'TT Hazelnuts';
+    font-style: italic;
+    font-size: 40px;
+    color: transparent; /* Make text color transparent */
+    -webkit-text-stroke-width: 1px; /* Width of the text outline */
+    -webkit-text-stroke-color: black; /* Color of the text outline */
+    animation: pan-in 5s forwards;
+}
+
+h1{
+    font-size: 70px;
+    padding: 20px;
+    display: inline-flex;/*removes spacing inbetween the two span text*/
+}
+.introduction{
+    color: white;
+    outline: auto;
+    padding: 15px;
+    border-radius: 50px;
+    animation: slide-in 10s forwards; /* Apply the slide-in animation */
+}
+
+.intro{
+    outline: auto;
+    padding: 15px;
+    border-radius: 50px;
+    animation: slide-in 8s forwards; /* Apply the slide-in animation */
+}
+
+
+.subtle-intro{
+    color: grey;
+    text-decoration: underline;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.hover-container{
+    padding: 30px;
+}
+
+.hover{
+    border: black solid 1px;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.hover:hover{
+    background-color: black;
+    color: white;
+    transform: scale(3.1);
+}
+
+/*Homepage CSS Styles*/
+.title{
+    text-align: center;
+    padding: 40px;
+}
+
+.home-h1{
+    font-family: 'TAN Mon Cheri';
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.prima-intro{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+    margin: 0;
+}
+
+.prima-h-p{
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.second-p-header{
+    text-decoration: underline;
+    padding: 0;
+}
+
+.Image-1{
+    display: none;
+    height: 500px;
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*images style for hompage*/
+.img-showcase{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+.top-image{
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.images{
+    height: 700px;
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.two{
+    height: 700px;
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.four{
+    height: 700px; 
+    width: 500px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;/* Set relative positioning context */
+}
+/*Shop now Buttons*/
+.shop{
+    border: black solid 1px;
+    border-radius: 30px;
+    width: 200px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.7s;
+    position: absolute;/* Position the button absolutely */
+    /*transform: translate(-50%, -50%); /*Center the button */
+}
+
+.shop:hover{
+    background-color: white;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.o {
+    top: 82%;/* Position the button vertically in the middle */
+    left: 52%;/* Position the button horizontally in the middle */ 
+}
+
+.tt {
+    top: 85%;
+    left: 28%;
+}
+
+.th {
+    top: 85%;
+    left: 76%;
+}
+
+.bckground-color{
+    background-color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+/*Homepage Second Paragrpah*/
+.homepage-s-p{
+    text-align: center;
+    padding: 40px;
+}
+.s-p{
+    font-size: 30px;
+    padding: 20px;
+}
+.s-p-t{
+    font-weight: bold;
+    font-size: 45px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-family: 'TAN Mon Cheri';
+}
+
+/*Homepage form style*/
+.homepage-form{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+}
+.Newsletter{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'TAN Mon Cheri';
+    padding: 15px;
+}
+.newsletter-pic{
+    border-radius: 30px;
+}
+.input{
+    padding: 10px;
+    display: flex;
+    width: 150%;
+    gap: 1%;
+}
+.email{
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+}
+.submit{
+    width: 40%;
+    border-radius: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+.submit:hover{
+    text-decoration: underline;
+    border: yellow solid 1px;
+}
+.hompage-image-background{
+    width: 40%;
+    padding: 25px;
+}
+
+/*PRODUCTS CSS STYLE starts here*/
+
+/*header container*/
+.products-header{
+    text-align: center;
+    padding: 40px;
+}
+
+.products-h1{
+    font-family: 'TAN Mon Cheri';
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+/*classy one container*/
+.classy-one-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px 100px 20px;
+}
+
+.inner-container{
+    text-align: center;
+}
+
+.class{
+    height: 400px;
+    width: 300px;
+    transition: 0.5s;
+}
+
+.class:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.first, .second, .third, .fourth{
+    padding-bottom: 20px;
+}
+
+.one-product{
+    overflow: hidden;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'TAN Mon Cheri';
+}
+
+.one-product:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*price container*/
+.price-container{
+    text-align: justify;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/*classy two container*/
+.classy-two-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px 100px 20px;
+}
+
+.fifth, .sixth, .seventh, .eight{
+    padding-bottom: 20px;
+}
+
+/*classy three container*/
+.classy-three-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px 100px 20px;
+}
+
+.ninth, .tenth, .eleventh, .twelfth{
+    padding-bottom: 20px;
+}
+
+/*classy four container*/
+#fourcontainer{
+    display: none;
+}
+
+.classy-four-container{
+    justify-content: space-evenly;
+    padding: 0 20px 100px 20px;
+}
+
+.my-button{
+    text-align: center;
+}
+
+.pr-btn{
+    padding: 30px;
+    background-color: transparent;
+    font-family: 'TAN Mon Cheri';
+    font-size: 25px;
+}
+
+.pr-btn:hover{
+    cursor: pointer;
+}
+
+/*About Us CSS Starts Here*/
+.aboutus-container{
+    text-align: center;
+    padding: 20px;
+}
+
+.aboutus-h1{
+    font-size: 50px;
+    font-family: 'TAN Mon Cheri';
+}
+
+.aboutush1-span{
+    font-size: 60px;
+    font-family: 'TT Hazelnuts';
+    font-style: italic;
+    color: transparent; /* Make text color transparent */
+    -webkit-text-stroke-width: 1px; /* Width of the text outline */
+    -webkit-text-stroke-color: black; /* Color of the text outline */
+    padding: 0 0 0 15px;
+}
+
+.underaboutus-container{
+    text-align: center;
+    padding: 0 0 60px 0;
+}
+
+.underaboutus-p{
+    font-size: 25px;
+}
+
+.about-us-introduction-container{
+    text-align: left;
+    padding: 0 0 150px 0;
+}
+
+.aboutus-introp{
+    font-size: 20px;
+    padding: 0 0 0 150px;
+}
+
+.aboutus-addedon{
+    text-align: right;
+    padding: 0 0 150px 0;
+}
+
+.aboutus-addedonp{
+    font-size: 20px;
+    padding: 0 150px 0 0;
+}
+
+.ourstory-container{
+    text-align: center;
+}
+
+.ourstory-h2{
+    font-size: 35px;
+    font-family: 'TT Hazelnuts';
+}
+
+.ourstory-containerp{
+    text-align: center;
+    padding: 0 0 60px 0;
+}
+
+.ourstory-p{
+    font-size: 20px;
+}
+
+.aboutus-contactus{
+    text-align: center;
+}
+
+.contact-clickon{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px;
+    border: black solid 1px;
+    border-radius: 30px;
+    color: black;
+    transition: 0.8s;
+}
+
+.contact-clickon:hover{
+    cursor: pointer;
+    background-color: black;
+    color: #edebe6;
+}
+
+/*Contact Us CSS*/
+
+/*header css*/
+.contactus-outercontainer{
+    padding-top: 100px;
+}
+
+.contactus-container{
+    text-align: center;
+    background-color: black;
+    padding: 180px;
+}
+
+.contactus-h1{
+    font-family: 'TAN Mon Cheri';
+    font-size: 40px;
+    color: #edebe6;
+    padding: 0;
+}
+
+.contactp{
+    color: gray;
+    font-size: 15px;
+}
+
+.arrowdown{
+    position: relative;
+    text-align: center;
+    padding: 0 0 0 46%;
+    bottom: 90px;
+}
+
+.arrow{
+    border: white solid 1px;
+    background-color: gray;
+    width: 3%;
+    padding: 15px;
+    border-radius: 30px;
+    position: absolute;
+    top: -120%;
+}
+
+.arrow:hover{
+    cursor: pointer;
+    background-color: #edebe6;
+}
+
+/*hidden container css*/
+.hidden-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    padding-bottom: 50px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.6s, height 0.6s;
+}
+
+.hidden-container.show {
+    opacity: 1;
+    height: 600px; /* Adjust as needed */
+}
+
+
+.contact-info p{
+    font-weight: bold;
+    color: #edebe6;
+    font-size: 20px;
+}
+
+.infoinner{
+    font-weight: normal;
+    font-size: 15px;
+}
+
+/*Form Css*/
+.getintouch-h2{
+    padding: 50px;
+    text-align: center;
+}
+
+.getintouch-h2 h2{
+    font-size: 40px;
+    font-family: 'TAN Mon Cheri';
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 20px 0 ;
+}
+
+.contact{
+    padding: 20px;
+    width: 25%;
+    border: black solid 1px;
+    border-radius: 30px;
+}
+
+.textarea-container{
+    padding: 0 120px 20px 60px;
+}
+
+.contact-textarea{
+    padding: 30px;
+    width: 100%;
+    border: black solid 1px;
+    border-radius: 28px;
+}
+
+.submit-container{
+    text-align: center;
+}
+
+.contact-submit{
+    padding: 20px;
+    border-radius: 30px;
+    width: 15%;
+}
+
+.contact-submit:hover{
+    cursor: pointer;
+    border: yellow solid 1px;
+}
+
+
+/*login css starts here*/
+.container{
+    text-align: center;
+    padding: 150px 250px 1px 250px;
+}
+.row{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 30px 0 80px 0;
+}
+
+.row h2{
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'TAN Mon Cheri';
+}
+
+.login-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*social login css*/
+.social-login{
+    display: grid;
+    padding: 20px;
+    gap: 5%;
+}
+
+.btn{
+    border: none solid 1px;
+    border-radius: 5px;
+    opacity: 0.85;
+    text-decoration: none;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #edebe6;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.fb{
+    background-color: #3b5998;
+}
+
+.twitter{
+    background-color: #1DA1F2;
+}
+
+.google{
+    background-color: #d62d20;
+}
+
+/*inner text css*/
+.vl-innertext{
+    border: black solid 1px;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 25px;
+    position: absolute;
+    top: 56%;
+}
+
+/*Manual Login css*/
+.manual-login{
+    display: grid;
+    width: 23%;
+    padding: 20px;
+    gap: 8%;
+}
+.hide-md-lg{
+    display: none;
+}
+.login{
+    border-radius: 20px;
+    width: 113%;
+    padding: 10px;
+    border: none;
+}
+.ss{
+    width: 118%;
+    border: black solid 1px;
+    background-color: #edebe6;
+    font-size: 20px;
+    opacity: 0.85;
+}
+.ss:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+/*bottom container css*/
+.bottom-container{
+    padding: 80px 0 80px 0;
+    text-align: center;
+}
+.signup-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+.col{
+    width: 20%;
+    padding: 20px 10px 20px 90px;
+    background-color: transparent;
+}
+
+.push{
+    font-size: 30px;
+    font-family: 'TAN Mon Cheri';
+    padding: 25px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 40px;
+}
+
+.push:hover{
+    cursor: pointer;
+    background-color: gray;
+    text-decoration: underline;
+}
+
+
+/*flagcontainer css*/
+.flag-header-container{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+.flag-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5%;
+    padding: 30px 20px;
+}
+
+.flag{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+}
+
+.flag:hover{
+    border: black solid 1px;
+    cursor: pointer;
+}
+
+/*Footer styles*/
+.footer-container{
+    background-color: black;
+    position: relative;
+    width: 100%;
+    bottom: -100px;
+    text-align: center;
+}
+
+.footer-div{
+    color: white;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.footer-div span {
+    margin: 0 10px; /* Space out footer links */
+}
+
+.footer-div a {
+    text-decoration: none; /* Remove underline from footer links */
+    color: white; /* Set the text color for footer links */
+    font-size: 14px; /* Set the font size for footer links */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.footer-div a:hover {
+    color: lightblue; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Keyframes for Slide-in Animation */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start with no opacity */
+    }
+    to {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+@keyframes pan-in{
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media all and (min-width:960px) and (max-width: 1284px) {
+    /* For tablets in landscape mode */
+    body {
+        overflow-y: hidden;
+        overflow: hidden;
+    }
+    .navbar ul li a {
+        font-size: 22px;
+    }
+    .banner-title {
+        font-size: 55px;
+    }
+    .banner-middle {
+        font-size: 35px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    .subtle-intro {
+        font-size: 18px;
+    }
+    .hover {
+        font-size: 26px;
+    }
+    .footer-container {
+        bottom: -240px;
+    }
+    .home-h1 {
+        font-size: 45px;
+    }
+    .prima-intro {
+        padding: 40px;
+    }
+    .prima-h-p {
+        font-size: 28px;
+    }
+    .s-p {
+        font-size: 28px;
+    }
+    .s-p-t {
+        font-size: 42px;
+    }
+    .Newsletter {
+        font-size: 45px;
+    }
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+    /* For large tablets or small laptops */
+    .navbar ul li a {
+        font-size: 20px;
+    }
+    .banner-title {
+        font-size: 50px;
+    }
+    .banner-middle {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 55px;
+    }
+    .subtle-intro {
+        font-size: 16px;
+    }
+    .hover {
+        font-size: 24px;
+    }
+    .home-h1 {
+        font-size: 42px;
+    }
+    .prima-intro {
+        padding: 35px;
+    }
+    .prima-h-p {
+        font-size: 26px;
+    }
+    .s-p {
+        font-size: 26px;
+    }
+    .s-p-t {
+        font-size: 40px;
+    }
+    .Newsletter {
+        font-size: 42px;
+    }
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+    /* For small laptops or large tablets */
+    .navbar ul li a {
+        font-size: 18px;
+    }
+    .banner-title {
+        font-size: 45px;
+    }
+    .banner-middle {
+        font-size: 28px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .subtle-intro {
+        font-size: 14px;
+    }
+    .hover {
+        font-size: 22px;
+    }
+    .home-h1 {
+        font-size: 40px;
+    }
+    .prima-intro {
+        padding: 30px;
+    }
+    .prima-h-p {
+        font-size: 24px;
+    }
+    .s-p {
+        font-size: 24px;
+    }
+    .s-p-t {
+        font-size: 38px;
+    }
+    .Newsletter {
+        font-size: 40px;
+    }
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+    /* For tablets in portrait mode */
+    .navbar ul li a {
+        font-size: 16px;
+    }
+    .banner-title {
+        font-size: 40px;
+    }
+    .banner-middle {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    .subtle-intro {
+        font-size: 14px;
+    }
+    .hover {
+        font-size: 20px;
+    }
+    .home-h1 {
+        font-size: 38px;
+    }
+    .prima-intro {
+        padding: 25px;
+    }
+    .prima-h-p {
+        font-size: 22px;
+    }
+    .s-p {
+        font-size: 22px;
+    }
+    .s-p-t {
+        font-size: 36px;
+    }
+    .Newsletter {
+        font-size: 38px;
+    }
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+    /* For large mobile phones */
+    .navbar ul li a {
+        font-size: 14px;
+    }
+    .banner-title {
+        font-size: 35px;
+    }
+    .banner-middle {
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .subtle-intro {
+        font-size: 12px;
+    }
+    .hover {
+        font-size: 18px;
+    }
+    .home-h1 {
+        font-size: 35px;
+    }
+    .prima-intro {
+        padding: 20px;
+    }
+    .prima-h-p {
+        font-size: 20px;
+    }
+    .s-p {
+        font-size: 20px;
+    }
+    .s-p-t {
+        font-size: 34px;
+    }
+    .Newsletter {
+        font-size: 35px;
+    }
+    .footer-container {
+        bottom: -180px;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+    /* For medium to small mobile phones */
+    
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        gap: 100px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin-bottom: 1px;
+    }
+    .navbar ul li a {
+        font-size: 15px;
+    }
+    .navbar ul ul{
+        display: grid;
+        position: static;
+        box-shadow: none;
+        padding: 0 0 0 0;
+    }
+    .navbar ul li:hover::after{
+        width: 0; /* Expand underline to full width on hover */
+    }
+    li .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    li .dropdown-content li{
+        padding: 0;
+    }
+    li .dropdown-content a:hover{
+        color: black;
+    }
+    
+    .banner-title {
+        font-size: 30px;
+    }
+    .banner-middle {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 35px;
+        flex-direction: column;
+    }
+    .subtle-intro {
+        font-size: 10px;
+    }
+    .hover {
+        font-size: 16px;
+    }
+    .home-h1 {
+        font-size: 32px;
+    }
+    .prima-intro {
+        padding: 15px;
+        text-align: center;
+    }
+    .prima-h-p {
+        font-size: 18px;
+    }
+    .n{
+        background-color: transparent;
+        box-shadow: 0px 0px 0px;
+    }
+    .images{
+        height: 300px;
+        width: fit-content;
+    }
+    .two, .four{
+        display: none;
+    }
+    .shop{
+        background-color: white;
+        opacity: 0.95;
+        color: black;
+        text-decoration: underline;
+        font-size: 10px;
+        width: 30%;
+    }
+    .o{
+        top: 76%;
+        left: 48%;
+    }
+    .tt, .th{
+        display: none;
+    }
+    .s-p {
+        font-size: 18px;
+    }
+    .s-p-t {
+        font-size: 32px;
+    }
+    .homepage-form{
+        text-align: center;
+    }
+    .input{
+        display: contents;
+    }
+    .Newsletter {
+        font-size: 32px;
+    }
+    .input{
+        width: fit-content;
+    }
+    .email{
+        width: fit-content;
+    }
+    .submit{
+        width: fit-content;
+    }
+    .hompage-image-background{
+        display: none;
+    }
+    .newsletter-pic{
+        display: none;
+    }
+    /*products css*/
+    .classy-one-container{
+        display: table;
+        gap: 6%;
+        width: fit-content;
+    }
+    .classy-two-container{
+        display: table;
+        gap: 6%;
+        width: fit-content;
+    }
+    .classy-three-container{
+        display: table;
+        gap: 6%;
+        width: fit-content;
+    }
+    .class{
+        height: 200px;
+        width: 150px;
+    }
+   .classy-four-container{
+        gap: 6%;
+        width: fit-content;
+    }
+    /*about us css*/
+    .about-us-introduction-container{
+        text-align: center;
+    }
+    .aboutus-addedon{
+        text-align: center;
+    }
+    .aboutus-introp{
+        padding: 0;
+    }
+    .aboutus-addedonp{
+        padding: 0;
+    }
+    .hidden{
+        display: none;
+    }
+    /*contact us css*/
+    .contactus-container{
+        padding: 26px;
+    }
+    .contactus-h1{
+        font-size: 26px;
+    }
+    .hidden-container{
+        display: grid;
+        padding: 15px;
+    }
+    .maps iframe{
+        width: 300px;
+        height: 250px;
+    }
+    .arrow{
+        top: -130%;
+        padding: 16px;
+        background-color: transparent;
+        border: none;
+        color: #edebe6;
+        font-size: 22px;
+    }
+    .arrow:hover{
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .input-container{
+        display: grid;
+        gap: 4%;
+        justify-content: center;
+        padding: 0 0 30px 0;
+    }
+    .contact{
+        width: 90%;
+    }
+    .textarea-container{
+        align-items: center;
+    }
+    .contact-textarea{
+        padding: 25px;
+        width: 113%;
+        
+    }
+    .contact-submit{
+        width: 50%;
+    }
+    .contact-lastline{
+        padding: 30px;
+        text-align: center;
+    }
+    .contact-lastline p {
+        color: gray;
+        font-size: 20px;
+    }
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+    /* For very small mobile phones */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul li {
+        margin-bottom: 5px;
+    }
+    .navbar ul li a {
+        font-size: 10px;
+    }
+    .banner-title {
+        font-size: 25px;
+    }
+    .banner-middle {
+        font-size: 15px;
+    }
+    h1 {
+        font-size: 30px;
+        flex-direction: column;
+    }
+    .subtle-intro {
+        font-size: 8px;
+    }
+    .hover {
+        font-size: 14px;
+    }
+    .home-h1 {
+        font-size: 30px;
+    }
+    .prima-intro {
+        padding: 10px;
+    }
+    .prima-h-p {
+        font-size: 16px;
+    }
+    .s-p {
+        font-size: 16px;
+    }
+    .s-p-t {
+        font-size: 30px;
+    }
+    .Newsletter {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Prima">
+        <meta name="keyword" content="Health, Fitness">
+        <meta name="author" content="Daniel Okoh">
+        <title>Homepage</title>
+        <link rel="icon" href="favicon/prima.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <a href="landingpage.html"><img src="logo/PRIMa (1).png" alt="logo" class="logo"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="home.html">Home &#43;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contactus.html">Contact us</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="homepage-introduction">
+            <section >
+                <div class="title">
+                    <h1 class="home-h1">Prima</h1>
+                </div>
+            </section>
+            <section>
+                <div class="prima-intro">
+                    <p class="prima-h-p">
+                        <span class="second-p-header">
+                            Welcome to Prima .
+                        </span> 
+                        <br>
+                        <br>Your ultimate destination for premium 
+                        <br>gym and streatwear designed to elevate 
+                        <br>your workout experience and look fresh.
+                    </p>
+                    <img src="homepageimg/intropic.JPG" alt="prima statue image" class="Image-1">
+                </div>
+            </section>
+            <section class="bckground-color ">
+                <div class="top-image">
+                    <img src="homepageimg/pic3.JPG" alt="fit picture image" class="images">
+                    <a href="#" class="shop o"><h2>Shop Now</h2></a>
+                </div>
+            </section>
+            <section class="bckground-color n">
+                <div class="img-showcase">
+                    <img src="homepageimg/pic2.JPG" alt="fit picture image" class="images two">
+                    <a href="#" class="shop tt"><h2>Shop Now</h2></a>
+                    <img src="homepageimg/pic4.JPG" alt="fit picture image" class="images four">
+                    <a href="#" class="shop th"><h2>Shop Now</h2></a>
+                </div>
+            </section>
+            <section>
+                <div class="homepage-s-p">
+                    <p class="s-p"> 
+                        <span class="s-p-t">At Prima</span> 
+                        <br>
+                        <br>We believe in blending functionality with style, 
+                        <br>ensuring you not only perform at your best but 
+                        <br>also look your best. Our homepage is your gateway 
+                        <br>to exploring our wide range of high-quality, stylish, 
+                        <br>and performance-driven streetwear.
+                    </p> 
+                </div>
+            </section>
+            <section>
+                <div class="homepage-form">
+                    <form id="newsletter-form">
+                        <Label for="Newsletter" class="Newsletter">Newsletter!</Label>
+                        <div class="input">
+                            <input type="email" id="email"  name="email" class="email" placeholder="Enter your Email Address." required>
+                            <input type="submit" value="Subscribe!" class="submit">
+                        </div>
+                    </form>
+                    <div class="hompage-image-background">
+                        <img src="homepageimg/newsletterpic.JPG" alt="group of men hanging out" class="newsletter-pic">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <br>
+        <div class="flag-header-container">
+            <p id="flag-title">You are in: <img id="current-flag" src="" alt="" class="flag"> </p>
+        </div>
+        <div class="flag-container">
+            <p id="flag-description">
+                Our International sites 
+            </p>
+            <br>
+            <div class="inner-flag-container">
+                <img src="flagimg/unitedkingdom.webp" alt="English" id="en" class="flag" onclick="changeLanguage('en')">
+            </div>
+            <div class="inner-flag-container">
+                <img src="flagimg/spanish.png" alt="Spanish" id="es" class="flag" onclick="changeLanguage('es')">
+            </div>
+            <div class="inner-flag-container">
+                <img src="flagimg/french.png" alt="French" id="fr" class="flag" onclick="changeLanguage('fr')">
+            </div>
+        </div>
+        <!--Footer-->
+        <footer class="footer-container">
+            <div class="footer-div">
+                <span><a href="#">Home</a></span>
+                <span><a href="#">Facebook</a></span>
+                <span><a href="#">Instagram</a></span>
+                <span><a href="#">Twitter</a></span>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>
